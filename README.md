@@ -25,7 +25,6 @@ Welcome to Threads Clone, a full-stack social media web app built with the MERN 
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png" alt="React" height="50" />
   <img src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png" alt="Node.js" height="50" />
   <img src="https://miro.medium.com/v2/resize:fit:800/1*8hhfdEqRkRQSaJrJlx60zg.png" alt="Chakra UI" height="50" />
-  <img src="https://cloudinary-res.cloudinary.com/image/upload/dpr_auto,f_auto,q_auto,w_auto/logo.png" alt="Cloudinary" height="50" />
   <img src="https://w7.pngwing.com/pngs/413/267/png-transparent-jwt-io-json-web-token-hd-logo.png" alt="JWT" height="50" />
 </p>
 
