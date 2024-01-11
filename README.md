@@ -1,0 +1,79 @@
+## Installation
+
+To run this project locally using the VS Code terminal, follow these steps:
+
+1. **Clone the repository:**
+
+   ```plaintext
+   git clone https://github.com/your-username/your-project.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```plaintext
+   cd your-project
+   ```
+
+3. **Navigate to the backend folder:**
+
+   ```plaintext
+   cd backend
+   ```
+
+4. **Install backend dependencies:**
+
+   ```plaintext
+   npm install
+   ```
+
+5. **Set up backend environment variables:**
+
+   - Create a `.env` file in the `backend` folder.
+   - Add the following variables with appropriate values:
+
+     ```env
+     PORT=5000
+     MONGO_URI=YOUR_ACTUAL_MONGO_URI_HERE
+     JWT_SECRET=YOUR_ACTUAL_JWT_SECRET_HERE
+     CLOUDINARY_CLOUD_NAME=YOUR_ACTUAL_CLOUDINARY_CLOUD_NAME_HERE
+     CLOUDINARY_API_KEY=YOUR_ACTUAL_CLOUDINARY_API_KEY_HERE
+     CLOUDINARY_API_SECRET=YOUR_ACTUAL_CLOUDINARY_API_SECRET_HERE
+     # Add any other backend environment variables your project needs
+     ```
+
+6. **Run the backend server:**
+
+   ```plaintext
+   npm start
+   ```
+
+   Ensure the backend server is running on the specified port.
+
+7. **Open a new VS Code terminal and navigate back to the project root:**
+
+   ```plaintext
+   cd ..
+   ```
+
+8. **Navigate to the frontend folder:**
+
+   ```plaintext
+   cd frontend
+   ```
+
+9. **Install frontend dependencies:**
+
+   ```plaintext
+   npm install
+   ```
+
+
+10. **Run the frontend application:**
+
+    ```plaintext
+    npm start
+    ```
+
+    This will start the React development server. Open your browser and go to `http://localhost:3000` to view the app.
+
+Now, your users will have instructions tailored for the specific folder structure of your project. Adjust any other details based on your project's specific requirements.
