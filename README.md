@@ -20,7 +20,7 @@ Welcome to Threads Clone, a full-stack social media web app built with the MERN 
 ## Technologies Used
 
 <p align="center">
-  <img src="https://docs.mongodb.com/images/mongodb-logo.svg" alt="MongoDB" height="50" />
+  <img src="https://docs.mongodb.com/images/mongodb-logo.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/1280px-MongoDB_Logo.svg.png" alt="MongoDB" height="50" />
   <img src="https://expressjs.com/images/express-facebook-share.png" alt="Express.js" height="50" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png" alt="React" height="50" />
   <img src="https://nodejs.org/static/images/logo-light.svg" alt="Node.js" height="50" />
