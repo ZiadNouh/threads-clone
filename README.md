@@ -17,6 +17,24 @@ Welcome to Threads Clone, a full-stack social media web app built with the MERN 
 - **Social Interaction:** Like, unlike, reply, and follow/unfollow functionalities for user engagement.
 - **Dark/Light Mode:** Customize the user interface based on personal preferences.
 
+## Technologies Used
+
+<p align="center">
+  <img src="https://www.mongodb.com/img/brand/mongodb-logo.svg" alt="MongoDB" height="50" />
+  <img src="https://expressjs.com/images/express-facebook-share.png" alt="Express.js" height="50" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" height="50" />
+  <img src="https://nodejs.org/static/images/logo-light.svg" alt="Node.js" height="50" />
+  <img src="https://chakra-ui.com/logo.png" alt="Chakra UI" height="50" />
+</p>
+
+- [MongoDB](https://www.mongodb.com/): Database for storing user data and posts.
+- [Express.js](https://expressjs.com/): Backend framework.
+- [React](https://reactjs.org/): Frontend library for building the user interface.
+- [Node.js](https://nodejs.org/): Runtime environment for running server-side code.
+- [Chakra UI](https://chakra-ui.com/): React component library for building accessible and customizable UI.
+- [Cloudinary](https://cloudinary.com/): Cloud-based image and video management.
+- [JWT](https://jwt.io/): JSON Web Tokens for secure authentication.
+
 ## Installation
 
 To run this project locally using the VS Code terminal, follow these steps:
