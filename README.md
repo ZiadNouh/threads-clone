@@ -1,3 +1,22 @@
+# Threads (A MERN Stack Social Media Web App)
+
+Welcome to Threads Clone, a full-stack social media web app built with the MERN (MongoDB, Express.js, React, Node.js) stack. This project is a clone of the popular Threads app, offering users a familiar and engaging social media experience.
+
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Screenshots](#screenshots)
+
+
+## Features
+
+- **Authentication and Authorization:** Secure user authentication using JWT tokens.
+- **Interactive User Interface:** A user-friendly interface built with React that enhances the overall user experience.
+- **Rich Media Support:** Users can create posts with images, providing a visually appealing platform.
+- **Social Interaction:** Like, unlike, reply, and follow/unfollow functionalities for user engagement.
+- **Dark/Light Mode:** Customize the user interface based on personal preferences.
+
 ## Installation
 
 To run this project locally using the VS Code terminal, follow these steps:
