@@ -20,11 +20,11 @@ Welcome to Threads Clone, a full-stack social media web app built with the MERN 
 ## Technologies Used
 
 <p align="center">
-  <img src="https://www.mongodb.com/img/brand/mongodb-logo.svg" alt="MongoDB" height="50" />
+  <img src="images/mongodb-logo.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="MongoDB" height="50" />
   <img src="https://expressjs.com/images/express-facebook-share.png" alt="Express.js" height="50" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" height="50" />
-  <img src="https://nodejs.org/static/images/logo-light.svg" alt="Node.js" height="50" />
-  <img src="https://chakra-ui.com/logo.png" alt="Chakra UI" height="50" />
+  <img src="https://nodejs.org/static/images/logo-light.svg](https://kinsta.com/wp-content/uploads/2021/09/nodejs-official-logo.jpg" alt="Node.js" height="50" />
+  <img src="https://chakra-ui.com/logo.png](https://miro.medium.com/v2/resize:fit:800/1*8hhfdEqRkRQSaJrJlx60zg.png" alt="Chakra UI" height="50" />
 </p>
 
 - [MongoDB](https://www.mongodb.com/): Database for storing user data and posts.
