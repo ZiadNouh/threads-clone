@@ -114,4 +114,3 @@ To run this project locally using the VS Code terminal, follow these steps:
 
     This will start the React development server. Open your browser and go to `http://localhost:3000` to view the app.
 
-Now, your users will have instructions tailored for the specific folder structure of your project. Adjust any other details based on your project's specific requirements.
