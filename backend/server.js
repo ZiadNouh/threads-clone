@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import dotenv from "dotenv";
 import { connectDB } from "./db/connectDB.js";
 import cookieParser from "cookie-parser";
@@ -9,25 +10,11 @@ import cors from "cors";
 
 dotenv.config();
 
-// const allowedOrigins = [
-//   "https://threads-clone-frontend-ktfm.onrender.com",
-//   "http://localhost:3000",
-// ]; // Add the origins that are allowed to access your backend.
-
-// const corsOptions = {
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   preflightContinue: false,
-//   optionsSuccessStatus: 204,
-// };
-
 connectDB();
+
+const PORT = process.env.PORT || 5000;
+const __dirname = path.resolve();
+
 const app = express();
 
 app.use(cookieParser());
@@ -54,7 +41,21 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
-const PORT = process.env.PORT || 5000;
+//httt://localhost:5000 => backend,frontend
+
+// Check if the app is running in production mode
+if (process.env.NODE_ENV === "production") {
+  // Serve static files (HTML, CSS, JS, etc.) from the frontend's 'dist' directory
+  app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+  // Catch-all route for GET requests
+  // This route is triggered when no other route matches the request
+  app.get("*", (req, res) => {
+    // Send the 'index.html' file from the frontend's 'dist' directory as the response
+    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+  });
+}
+
 app.listen(PORT, () => {
   console.log(`app is listening on port ${PORT}`);
 });
