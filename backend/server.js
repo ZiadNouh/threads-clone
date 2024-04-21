@@ -7,10 +7,13 @@ import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import { v2 as cloudinary } from "cloudinary";
 import cors from "cors";
+import job from "./cron/cron.js";
 
 dotenv.config();
 
 connectDB();
+
+job.start();
 
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
