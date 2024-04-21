@@ -15,22 +15,15 @@ import {
 } from "@chakra-ui/react";
 import { BsInstagram } from "react-icons/bs";
 import { CgMoreO } from "react-icons/cg";
-import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import userAtom from "../atoms/userAtom";
 import { Link as RouterLink } from "react-router-dom";
-import useShowToast from "../hooks/useShowToast";
+import useFollowUnfollow from "../hooks/useFollowUnfollow";
 
 export const UserHeader = ({ user }) => {
   const toast = useToast(); // Toast hook for showing notifications
   const currentUser = useRecoilValue(userAtom); // Current logged-in user
-  const [following, setFollowing] = useState(
-    // State for following status
-    user.followers.includes(currentUser?._id)
-  );
-  const showToast = useShowToast(); // Custom hook for showing toasts
-  const [updating, setUpdating] = useState(false); // State for update status
-
+  const { handleFollowUnfollow, following, updating } = useFollowUnfollow(user);
   // Function to copy current URL to clipboard
   const copyURL = () => {
     const currentUrl = window.location.href;
@@ -43,43 +36,6 @@ export const UserHeader = ({ user }) => {
         isClosable: true,
       });
     });
-  };
-
-  // Function to handle follow/unfollow action
-  const handleFollowUnfollow = async () => {
-    if (!currentUser) {
-      showToast("Error", "Please login to follow", "error");
-      return;
-    }
-    if (updating) return;
-
-    setUpdating(true);
-    try {
-      const res = await fetch(`/api/users/follow/${user._id}`, {
-        method: "POST",
-        credentials: "include", // Include cookies for authentication
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
-      if (data.error) {
-        showToast("Error", data.error, "error");
-        return;
-      }
-      if (following) {
-        showToast("Success", `Unfollowed ${user.name}`, "success");
-        user.followers.pop();
-      } else {
-        showToast("Success", `followed ${user.name}`, "success");
-        user.followers.push(currentUser?._id);
-      }
-      setFollowing(!following);
-    } catch (error) {
-      showToast("Error", error, "error");
-    } finally {
-      setUpdating(false);
-    }
   };
 
   return (

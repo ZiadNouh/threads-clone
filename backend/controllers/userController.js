@@ -252,6 +252,45 @@ const getUserProfile = async (req, res, next) => {
   }
 };
 
+const getSuggestedUsers = async (req, res) => {
+  try {
+    // Get the ID of the current user
+    const userId = req.user._id;
+
+    // Retrieve the users followed by the current user
+    const usersFollowedByYou = await User.findById(userId).select("following");
+
+    // Retrieve a sample of users excluding the current user
+    const users = await User.aggregate([
+      {
+        $match: {
+          _id: { $ne: userId },
+        },
+      },
+      {
+        $sample: { size: 10 },
+      },
+    ]);
+
+    // Filter out users that the current user is already following
+    const filteredUsers = users.filter(
+      (user) => !usersFollowedByYou.following.includes(user._id)
+    );
+
+    // Take the first four filtered users as suggested users
+    const suggestedUsers = filteredUsers.slice(0, 4);
+
+    // Remove password field from suggested users for security
+    suggestedUsers.forEach((user) => (user.password = null));
+
+    // Send the suggested users as a JSON response
+    res.status(200).json(suggestedUsers);
+  } catch (error) {
+    // Handle errors and send an error response
+    res.status(500).json({ error: error.message });
+  }
+};
+
 export default {
   signupUser,
   loginUser,
@@ -259,4 +298,5 @@ export default {
   followUnFollowUser,
   updateUser,
   getUserProfile,
+  getSuggestedUsers,
 };

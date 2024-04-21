@@ -4,7 +4,7 @@ import useShowToast from "../hooks/useShowToast";
 import Post from "../components/Post";
 import { useRecoilState } from "recoil";
 import postsAtom from "../atoms/postsAtom";
-// import SuggestedUsers from "../components/SuggestedUsers"; // This line is commented out
+import SuggestedUsers from "../components/SuggestedUsers";
 
 const HomePage = () => {
   // State variables and hooks
@@ -66,8 +66,8 @@ const HomePage = () => {
           md: "block",
         }}
       >
-        {/* SuggestedUsers component (currently commented out) */}
-        {/* <SuggestedUsers /> */}
+        {/* SuggestedUsers component */}
+        <SuggestedUsers />
       </Box>
     </Flex>
   );
