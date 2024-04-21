@@ -52,13 +52,7 @@ To run this project locally using the VS Code terminal, follow these steps:
    cd your-project
    ```
 
-3. **Navigate to the backend folder:**
-
-   ```plaintext
-   cd backend
-   ```
-
-4. **Install backend dependencies:**
+3. **Install backend dependencies:**
 
    ```plaintext
    npm install
@@ -79,7 +73,7 @@ To run this project locally using the VS Code terminal, follow these steps:
      # Add any other backend environment variables your project needs
      ```
 
-6. **Run the backend server:**
+5. **Run the backend server:**
 
    ```plaintext
    npm start
@@ -87,26 +81,26 @@ To run this project locally using the VS Code terminal, follow these steps:
 
    Ensure the backend server is running on the specified port.
 
-7. **Open a new VS Code terminal and navigate back to the project root:**
+6. **Open a new VS Code terminal and navigate back to the project root:**
 
    ```plaintext
    cd ..
    ```
 
-8. **Navigate to the frontend folder:**
+7. **Navigate to the frontend folder:**
 
    ```plaintext
    cd frontend
    ```
 
-9. **Install frontend dependencies:**
+8. **Install frontend dependencies:**
 
    ```plaintext
    npm install
    ```
 
 
-10. **Run the frontend application:**
+9. **Run the frontend application:**
 
     ```plaintext
     npm start
